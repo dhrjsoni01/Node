@@ -5,10 +5,11 @@ var facultySchema = new mongoose.Schema({
     middle: String,
     last  : String
   },
-  gender : String,
+  gender : { type:String, default :"M"},
   department : String,
-  password   : String,
-  email      : String,
+  vaified    : {type : Boolean,default : false},
+  password   : {type : String,required : true},
+  email      : {type : String,required : true},
   mobile     : String,
 
 });

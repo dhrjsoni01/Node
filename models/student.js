@@ -11,7 +11,7 @@ var studentSchema = mongoose.Schema({
     semester    : String,
     record      : [
                       {
-                          name        : String,
+                          semester    : String,
                           startDate   : String,
                           endDate     : String,
                           data        : [
@@ -19,7 +19,6 @@ var studentSchema = mongoose.Schema({
                               date        : Date,
                               subject     : String,
                               subjectCode : String,
-                              branchCode  : String,
                               facultyID   :{type: mongoose.Schema.Types.ObjectId, rel : "Faculty"},
                               FacultyName : String,
                             }

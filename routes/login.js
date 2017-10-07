@@ -26,6 +26,14 @@ router.get("/student",(req,res)=>{
   });
 })
 
+// admin login form render route
+router.get("/admin",(req,res)=>{
+  return res.status(200).json({
+    status:"success",
+    message: "this route will render admin login page"
+  });
+})
+
 
 // login post router for validation and logging in
 
@@ -42,6 +50,14 @@ router.post("/student",(req,res)=>{
   return res.status(200).json({
     status:"success",
     message: "this route will let students to login with valid credencials"
+  });
+})
+
+// admin post login route
+router.post("/admin",(req,res)=>{
+  return res.status(200).json({
+    status:"success",
+    message: "this route will let admin to login with valid credencials"
   });
 })
 

@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var batchSchema = new mongoose.Schema({
-  name: String,
+  name: {type : String , unique: true},
+  year: {type : String , unique: true},
   branch: [{
       name        : String,
       branchCode  : String,
