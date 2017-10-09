@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var branchSchema = new mongoose.Schema({
   name        : String,
-  branchCode  : {type: String,unique: true},
+  branchCode  : {type: String,unique: true,required:true},
   student     : [
     {
       type: mongoose.Schema.Types.ObjectId,
